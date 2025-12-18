@@ -5,7 +5,7 @@
     <string name="nama">Nama Siswa*</string>
     <string name="alamat">Alamat Siswa*</string>
     <string name="telpon">Telpon Siswa*</string>
-    <string name="nama1">Nama Siswa :</string>
+    <string name="nama1">Nama Siswa  :</string>
     <string name="alamat1">Alamat Siswa :</string>
     <string name="telpon1">Telpon Siswa :</string>
     <string name="required_field">required_field</string>
@@ -21,5 +21,7 @@
     <string name="loading">Loading..</string>
     <string name="attention">Perhatian !</string>
     <string name="tanya">Apakah yakin akan menghapus ini ?</string>
-    <string name="deskripsi_no_item"> Tidak ada data Siswa. Tap + untuk menambah data </string>
+    <string name="deskripsi_no_item">
+        Tidak ada data Siswa. Tap + untuk menambah data
+    </string>
 </resources>
