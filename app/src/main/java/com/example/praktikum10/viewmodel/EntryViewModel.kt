@@ -34,5 +34,4 @@ class EntryViewModel (private val repositoryDataSiswa: RepositoryDataSiswa) : Vi
             }
         }
     }
-
 }
