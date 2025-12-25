@@ -26,7 +26,7 @@ class EntryViewModel (private val repositoryDataSiswa: RepositoryDataSiswa) : Vi
 
     suspend fun addSiswa(){
         if (validasiInput()){
-            val sip: Response<Void> = repositoryDataSiswa.postDatasiswa(uiStateSiswa.detailSiswa.toDataSiswa())
+            val sip: Response<Void> = repositoryDataSiswa.postDataSiswa(uiStateSiswa.detailSiswa.toDataSiswa())
             if (sip.isSuccessful){
                println("Sukses Tambah Data : ${sip.message()}")
             }else {
