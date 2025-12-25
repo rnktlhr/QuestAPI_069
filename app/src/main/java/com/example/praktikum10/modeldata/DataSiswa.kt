@@ -1,13 +1,17 @@
 package com.example.praktikum10.modeldata
 
-import android.provider.ContactsContract
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
 data class DataSiswa(
+    @SerialName("id")
     val id : Int,
+    @SerialName("nama")
     val nama : String,
+    @SerialName("alamat")
     val alamat : String,
+    @SerialName("telpon")
     val telpon : String
 )
 
@@ -22,20 +26,23 @@ data class DetailSiswa(
     val alamat: String = "",
     val telpon: String = "",
 )
+
 fun DetailSiswa.toDataSiswa(): DataSiswa = DataSiswa(
     id = id,
     nama = nama,
     alamat = alamat,
     telpon = telpon
 )
-fun DataSiswa.toUiStateSiswa(isEntryValid: Boolean = false): UIStateSiswa = UIStateSiswa(
-    detailSiswa = this.toDetailSiswa(),
-    isEntryValid = isEntryValid
-)
+
+fun DataSiswa.toUiStateSiswa(isEntryValid: Boolean = false): UIStateSiswa =
+    UIStateSiswa(
+        detailSiswa = this.toDetailSiswa(),
+        isEntryValid = isEntryValid
+    )
+
 fun DataSiswa.toDetailSiswa(): DetailSiswa = DetailSiswa(
     id = id,
     nama = nama,
     alamat = alamat,
     telpon = telpon
 )
-
